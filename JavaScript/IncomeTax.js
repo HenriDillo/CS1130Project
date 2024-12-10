@@ -1,4 +1,5 @@
 document.getElementById('calculateButton').addEventListener('click', function () {
+    alert("Button clicked!")
     var taxableIncome = parseFloat(document.getElementById('taxableIncome').value);
   var incomeTax = 0;
 
