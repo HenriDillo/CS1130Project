@@ -1,0 +1,152 @@
+:root {
+  --background-color: #fdf6e3; /* Soft cream for overall background */
+  --primary-color: #34495e;   /* Dark slate for text */
+  --secondary-color: #e67e22; /* Pastel orange for highlights */
+  --accent-color: #84c9fb;    /* Pastel blue for buttons and accents */
+  --hover-color: #68b3e0;     /* Slightly darker blue for hover */
+  --popup-background: #fef5ed; /* Light pastel for popups */
+  --input-border: #dcdfe6;    /* Neutral border for inputs */
+  --input-focus: #fab1a0;     /* Light pink for focused input states */
+  --shadow-color: rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #dbeafe, #93c5fd);
+  background-size: 80px 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: var(--primary-color);
+  line-height: 1.8;
+}
+
+.container {
+  width: 95%;
+  max-width: 850px;
+  background-color: var(--popup-background);
+  border-radius: 15px;
+  box-shadow: 0 6px 15px var(--shadow-color);
+  padding: 40px;
+  text-align: center;
+}
+
+.converter-menu h1 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.converter-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+}
+
+.openBTN {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 20px 30px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px var(--shadow-color);
+  width: 300px;
+}
+
+.openBTN:hover {
+  background-color: var(--hover-color);
+  transform: translateY(-3px);
+}
+
+.temp-popup-container,
+.height-popup-container {
+  display: none;
+  background-color: var(--card-color);
+  border-radius: 15px;
+  padding: 30px;
+  width: 100%;
+  background-color: var(--popup-background);
+  box-shadow: 0 6px 15px var(--shadow-color);
+}
+
+.input-group {
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid var(--input-border);
+  border-radius: 8px;
+  font-size: 1.1rem;
+  background-color: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: var(--input-focus);
+  box-shadow: 0 0 5px var(--input-focus);
+}
+
+.button-group {
+  display: flex;
+  gap: 20px;
+}
+
+.Btnconvert,
+.Btnclear,
+.Btnreturn {
+  flex: 1;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--secondary-color);
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.Btnconvert:hover,
+.Btnclear:hover,
+.Btnreturn:hover {
+  background-color: #d35400; /* Slightly darker orange for hover */
+  transform: translateY(-3px);
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+
+  .button-group {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .openBTN {
+    width: 100%;
+  }
+}
